@@ -29,7 +29,10 @@ const Navbar = ({ click }) => {
           <Link to="/">MarketPlace</Link>
         </li>
         <li>
-          <Link to="/">My Gallery</Link>
+          <Link to="/gallhome">My Gallery</Link>
+        </li>
+        <li>
+          <Link to="/">Login</Link>
         </li>
       </ul>
 

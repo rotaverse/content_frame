@@ -1,15 +1,15 @@
-// Home Screen for MarketPlace
-import "./HomeScreen.css";
+// Gallery Home Screen 
+import "./GalleryScreen.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
-import Product from "../components/Product";
+import Product from "../components/GalleryProduct";
 
 //Actions
 import { getProducts as listProducts } from "../redux/actions/productActions";
 
-const HomeScreen = () => {
+const GalleryScreen = () => {
   const dispatch = useDispatch();
 
   const getProducts = useSelector((state) => state.getProducts);
@@ -21,7 +21,7 @@ const HomeScreen = () => {
 
   return (
     <div className="homescreen">
-      <h2 className="homescreen__title">Module's MarketPlace</h2>
+      <h2 className="homescreen__title">My Module's Gallery</h2>
       <div className="homescreen__products">
         {loading ? (
           <h2>Loading...</h2>
@@ -44,4 +44,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default GalleryScreen;
