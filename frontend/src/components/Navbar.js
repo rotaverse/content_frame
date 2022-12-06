@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import  MenuApp  from './MenuApp';
 
 const Navbar = ({ click }) => {
   const cart = useSelector((state) => state.cart);
@@ -32,7 +33,7 @@ const Navbar = ({ click }) => {
           <Link to="/gallhome">My Gallery</Link>
         </li>
         <li>
-          <Link to="/">Login</Link>
+          <Link to="/"><MenuApp /></Link>
         </li>
       </ul>
 
