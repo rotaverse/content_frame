@@ -1,6 +1,7 @@
 import "./CartScreen.css";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
 // Components
@@ -35,6 +36,7 @@ const CartScreen = () => {
       .toFixed(2);
   };
 
+
   return (
     <>
       <div className="cartscreen">
@@ -63,7 +65,9 @@ const CartScreen = () => {
             <p>${getCartSubTotal()}</p>
           </div>
           <div>
-            <button>Proceed To Checkout</button>
+              <Link to={`/payment`} className="info__button">
+                Proceed to Checkout
+            </Link> 
           </div>
         </div>
       </div>

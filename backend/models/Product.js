@@ -15,12 +15,53 @@ const productSchema = mongoose.Schema({
   },
   countInStock: {
     type: Number,
-    required: true,
+    required: false,
   },
   imageUrl: {
     type: String,
     required: true,
   },
+  rating: {
+    type: Number,
+    required: true,
+  },
+  difficulty: {
+    type: Number,
+    required: true,
+  },
+  SlidesUrl: {
+    type: String,
+    required: false,
+  },
+  VideoUrl: {
+    type: String,
+    required: false,
+  },
+  resources: {
+    type: String,
+    required: false,
+  },
+  activities: {
+    type: String,
+    required: false,
+  },
+  questions: {
+    type: String,
+    required: false,
+  },
+  narrative: {
+    type: String,
+    required: false,
+  },
+  tosell: {
+    type: Boolean,
+    required: true,
+  },
+  ownerid: {
+    type: String,
+    required: true,
+  },
+
 });
 
 const Product = mongoose.model("product", productSchema);

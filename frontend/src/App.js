@@ -14,6 +14,8 @@ import CartScreen from "./screens/CartScreen";
 import GallHomeScreen from "./screens/GalleryScreen"; // Gallery Home
 import MyGallScreen from "./screens/MyGalleryScreen"; // Gallery Product Screen
 import EditScreen from "./screens/EditScreen"; // Editor for Modules
+import PaymentScreen from "./screens/PaymentScreen"; // Payment Screen
+import PlaceOrderScreen from "./screens/PlaceOrderScreen"; // Payment Screen
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route exact path="/" component={HomeScreen} />
           <Route exact path="/product/:id" component={ProductScreen} />
           <Route exact path="/cart" component={CartScreen} />
+          <Route exact path='/payment' component={PaymentScreen} />
+          <Route exact path='/order' component={PlaceOrderScreen} />
           <Route exact path="/gallhome" component={GallHomeScreen} />
           <Route exact path="/gallproduct/:id" component={MyGallScreen} />
           <Route exact path="/edit/:id" component={EditScreen} />
