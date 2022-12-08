@@ -16,7 +16,7 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(savePaymentMethod(paymentMethod))
-    history.push('/placeorder')
+    history.push('/order')
   }
 
   return (
@@ -56,10 +56,12 @@ const PaymentScreen = ({ history }) => {
           </Col>
         </Form.Group>
 
-        <Link to={`/order`} className="info__button">
+        {/* <Link to={`/order`} className="info__button">
                 Continue
-        </Link> 
-
+  </Link> */} 
+        <Button type='submit' variant='primary'>
+          Continue
+        </Button>
 
       </Form>
     </FormContainer>
