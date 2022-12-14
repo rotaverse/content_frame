@@ -1,8 +1,10 @@
-require("dotenv").config();
-const express = require("express");
-const productRoutes = require("./routes/productRoutes");
-const connectDB = require("./config/db");
+import dotenv from "dotenv";
+import express from "express";
 
+import productRoutes from './routes/productRoutes.js'
+import connectDB from './config/db.js'
+
+dotenv.config() 
 connectDB();
 
 const app = express();
